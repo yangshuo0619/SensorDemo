@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.owen.demo.sensordemo.R;
 import com.owen.demo.sensordemo.utils.LogUtils;
@@ -24,14 +25,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         TextView tvDispaly = findViewById(R.id.tv_dispaly);
-        Button btnStartToTimeActivity = findViewById(R.id.btn_start_to_time_activity);
-        btnStartToTimeActivity.setOnClickListener(this);
+        Button btnStartToUtilsActivity = findViewById(R.id.btn_start_to_utils_activity);
+        btnStartToUtilsActivity.setOnClickListener(this);
         Button btnStart = findViewById(R.id.btn_start);
         btnStart.setOnClickListener(this);
         Button btnPause = findViewById(R.id.btn_pause);
         btnPause.setOnClickListener(this);
         Button btnStop = findViewById(R.id.btn_stop);
         btnStop.setOnClickListener(this);
+        Button btnGyroscopeAndAcceleration = findViewById(R.id.btn_gyroscope_and_acceleration);
+        btnGyroscopeAndAcceleration.setOnClickListener(this);
     }
 
     @Override
@@ -46,17 +49,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_stop:
                 logUtils.i("停止的点击事件");
                 break;
-            case R.id.btn_start_to_time_activity:
-                startToTimeActivity();
+            case R.id.btn_start_to_utils_activity:
+                startToUtilsActivity();
                 break;
+                case R.id.btn_gyroscope_and_acceleration:
+                    Toast.makeText(this,"陀螺仪与加速度",Toast.LENGTH_LONG).show();
+                    break;
             default:
                 logUtils.i("未定义的点击事件");
                 break;
         }
     }
 
-    private void startToTimeActivity() {
-        Intent intent = new Intent(MainActivity.this,TimeActivity.class);
+    private void startToUtilsActivity() {
+        Intent intent = new Intent(MainActivity.this,UtilsActivity.class);
         startActivity(intent);
     }
 }
