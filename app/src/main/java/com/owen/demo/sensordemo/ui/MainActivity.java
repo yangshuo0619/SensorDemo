@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startToUtilsActivity();
                 break;
                 case R.id.btn_gyroscope_and_acceleration:
-                    Toast.makeText(this,"陀螺仪与加速度",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MainActivity.this,SensorActivity.class);
+                    startActivity(intent);
+                    this.finish();
                     break;
             default:
                 logUtils.i("未定义的点击事件");

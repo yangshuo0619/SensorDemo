@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.TimeActivity" />
-        <activity android:name=".ui.UtilsActivity"></activity>
+        <activity android:name=".ui.UtilsActivity" />
+        <activity android:name=".ui.SensorActivity"></activity>
     </application>
 
 </manifest>

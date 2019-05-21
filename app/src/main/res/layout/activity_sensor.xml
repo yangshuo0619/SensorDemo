@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SensorActivity">
+
+    <Button
+        android:id="@+id/btn_sensor_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_sensor_data_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="传感器数据" />
+        <TextView
+            android:id="@+id/tv_sensor_data_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/tv_sensor_data_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/tv_sensor_data_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            android:layout_centerInParent="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
